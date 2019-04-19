@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/text_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:hint="Filmtitel eingeben"
+                            android:inputType="text" />
+
+                        <Button
+                            android:id="@+id/buttonSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Search!" />
+
+                        <ListView
+                            android:id="@+id/ResultsList"
+                            android:layout_width="match_parent"
+                            android:layout_height="414dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/buttonPageDown"
+                                android:layout_width="199dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="countPageDown"
+                                android:text="down" />
+
+                            <Button
+                                android:id="@+id/buttonPageUp"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:onClick="countPageUp"
+                                android:text="up" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/FavList"
+                            android:layout_width="match_parent"
+                            android:layout_height="528dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+</ScrollView>
+
+
