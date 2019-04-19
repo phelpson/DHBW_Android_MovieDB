@@ -145,9 +145,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //create connection manager for checking the internet connection
         ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         // getting network info about wifi status
-        NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mWifi = connManager.getActiveNetworkInfo();
         //check if wifi is connected
-        if (mWifi.isConnected()) {
+        if (mWifi != null) {
 
             if( v == searchbutton ){
                Log.d("searchButton","search button clicked");
